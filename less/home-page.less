@@ -1,3 +1,47 @@
+#my-header {
+	.flex-center();
+	border: none;
+
+	#header-info h1, p {
+		margin: 1%;
+		color: black;
+  }
+  	
+	header {
+		margin: 2% 0 0 0;
+		width: @default-margin;
+		background-color: @theme-color;
+
+		h1 {
+			margin-top: 1%;
+    } 
+    
+   
+    }
+
+    #header-info {
+      @media @mobil {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        nav {
+          width: 100%;
+          justify-content: center;
+          align-items: center;
+
+        }
+      }
+    }
+	
+}
+
+
+
+
+
+
 .home {
 
   .content-section {
@@ -5,12 +49,18 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-
-   
+ 
     
     .text-content {
       width: 48%;
       padding-right: 1%;
+      
+      @media @mobil {
+        margin: 2% 2% 1% 2%;
+        width: 100%;
+             
+      }
+      
     }
 
     .img-content {
@@ -20,7 +70,24 @@
       img {
         border-radius: 10px;
       }
+      @media @mobil {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+       
+        
+      }
     }
+    
+    @media @mobil {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+     
+      
+    }
+    
   }
 
   .inverse-content {
@@ -56,6 +123,44 @@
     .destination {
       width: 30%;
       margin-bottom: 30px;
+
+      a {
+        text-decoration: none;
+      }
+
+      div {
+
+        .style-button(rgb(11, 89, 116), white, 30px, 1rem);
+        
+      }
+
+      @media @mobil {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 80%;
+  
+      }
+     
+    }
+
+    @media @mobil {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
   }
+
+  
+  .welcome {
+    margin-top: 2%;
+    
+    @media @mobil {
+      border-bottom: 2px dashed @navigation-border;
+      margin: 2% 2% 1% 2%;
+    }
+    
+  }
+
 }// home

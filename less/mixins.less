@@ -1,1 +1,18 @@
 // Mixins in here
+.style-button(@backround-color, @text-color, @button-height, @button-radius) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: @backround-color;
+    color: @text-color;
+    height: @button-height;
+    border-radius: @button-radius;
+
+}
+
+// mixin
+.flex-center() {
+	display: flex;
+	justify-content: center;
+}
